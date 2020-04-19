@@ -33,18 +33,28 @@ class SpeakList():
         engine.setProperty('voice',voices[0].id)
         engine.say(word)
         engine.runAndWait()
+        print("voice len = {}".format(len(voices)-1))
 
 
     def print(self):
         if self.__word != None:
             print(self.__word)
 
-    
+
+
+
+class Task:
+    def __init__(self):
+        speakerlistener = SpeakList()
+
     def actuality(self):
         hour = int(datetime.datetime.now().hour)
         meteo = None
         print(hour)
 
+
 a = SpeakList()
 a.actuality()
-a.speak("junior")
+a.speak("Junior")
+a.Listen()
+a.print()
