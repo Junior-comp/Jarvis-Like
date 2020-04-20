@@ -10,7 +10,7 @@ ecouter de la musique
 import cmd
 import os
 import glob
-#import wikipedia
+import wikipedia
 import webbrowser
 import smtplib
 
@@ -34,14 +34,7 @@ def ecoutermusique(str):
 def delete(str, bool):
     print("supprimer le fichier str sur tout l'ordi ou pas")
 
-def searchwiki(str):
-    if 'wikipedia' in str.lower():
-        print('looking at wikipedia')
-        str = str.replace('wikipedia', '')
-        """result = wikipedia.summary(str,sentences = 2) rechercher exemple d'utilisation du module wikipedia
-        print(result)
-        speak(result)
-        """
+
 def openyoutube(str): #rechercher exemple par rapport au module web browser et comment ouvrir un site 
     if 'open youtube' in str.lower:
         print("ouverture de youtube")
@@ -49,11 +42,8 @@ def openyoutube(str): #rechercher exemple par rapport au module web browser et c
         chercher comment ouvrir un site avec chrome
        """
 
-def timeandmeteo():
-    strtime = datetime.datetime.now().strtime("%H:%M:%S")
-    #chercher comment avoir la meteo en python
 
-def openapp():
+#def openapp():
     #chercher comment ouvrir une application en python
 
 def sendemail(to, content): #tres dangereux  chercher smtplib exemple
